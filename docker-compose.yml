@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  pantry_db:
+    image: mongo:latest
+    container_name: pantry_db
+    ports:
+      - 27017:27017
+    volumes:
+      - pantry_db:/data/db
+    
+volumes:
+  pantry_db:
+    driver: local
